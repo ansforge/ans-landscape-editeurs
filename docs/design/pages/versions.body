@@ -1,0 +1,37 @@
+<!-- Versions et roadmaps -->
+<!-- versions -->
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Versions</a></li></ol></div></nav>
+
+  <h1>Versions et roadmaps</h1>
+  <p class="fr-text--lead">Quelle version utiliser, jusqu'à quand elle est supportée, ce qui arrive ensuite.</p>
+
+  <div class="fr-callout fr-callout--yellow-moutarde"><h2 class="fr-callout__title fr-h5">À traiter : 2 versions demandent une action</h2>
+    <p class="fr-callout__text">1 version dépréciée, 1 version en fin de vie. Elles sont affichées en premier dans le tableau.</p></div>
+
+  <h2 class="fr-h4 fr-mt-4w">Légende des statuts</h2>
+  <ul class="fr-raw-list" style="display:flex;gap:.75rem;flex-wrap:wrap;list-style:none;padding:0">
+    <li>{{REC}}</li><li>{{SUP}}</li><li>{{DEP}}</li><li>{{EOL}}</li><li>{{EXP}}</li>
+  </ul>
+  <p class="meta">Recommandée : à utiliser pour tout nouveau développement. Supportée : maintenue. Dépréciée : migration à prévoir. Fin de vie : plus de support. Expérimentale : non stabilisée.</p>
+
+  <div class="fr-grid-row fr-grid-row--gutters fr-mt-2w">
+    <div class="fr-col-12 fr-col-md-4"><div class="fr-select-group"><label class="fr-label" for="fs">Statut</label><select class="fr-select" id="fs"><option>Tous</option><option>Dépréciée</option><option>Fin de vie</option></select></div></div>
+    <div class="fr-col-12 fr-col-md-4"><div class="fr-select-group"><label class="fr-label" for="ft">Thème</label><select class="fr-select" id="ft"><option>Tous</option><option>Identité</option><option>Interopérabilité</option></select></div></div>
+  </div>
+
+  <div class="fr-table fr-table--layout-fixed"><div class="fr-table__wrapper"><div class="fr-table__container"><div class="fr-table__content">
+    <table><caption>Versions supportées par service <span class="fr-sr-only">, triées par urgence</span></caption>
+    <thead><tr><th scope="col">Service</th><th scope="col">Version recommandée</th><th scope="col">Statut de la version concernée</th><th scope="col">Fin de support</th><th scope="col">Prochaine version</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><a href="#">Ancien service A</a></th><td>x.y</td><td>{{EOL}}</td><td>jj/mm/aaaa</td><td>—</td></tr>
+      <tr><th scope="row"><a href="#">ROR</a></th><td>x.y</td><td>{{DEP}}</td><td>jj/mm/aaaa</td><td>x.z (prévue …)</td></tr>
+      <tr><th scope="row"><a href="service-psc.html">Pro Santé Connect</a></th><td>x.y</td><td>{{REC}}</td><td>—</td><td>x.z (prévue …)</td></tr>
+      <tr><th scope="row"><a href="#">CI-SIS</a></th><td>x.y</td><td>{{SUP}}</td><td>—</td><td>—</td></tr>
+      <tr><th scope="row"><a href="#">MSSanté</a></th><td>x.y</td><td>{{SUP}}</td><td>—</td><td>—</td></tr>
+    </tbody></table>
+  </div></div></div></div>
+  <p class="meta">Valeurs d'exemple. Les vraies valeurs viennent de <code>data/versions.yml</code>.</p>
+</div>

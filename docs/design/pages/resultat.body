@@ -1,0 +1,49 @@
+<!-- Votre parcours éditeur -->
+<!-- demarrer -->
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" href="demarrer.html">Je démarre</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Votre parcours</a></li></ol></div></nav>
+
+  <h1>Votre parcours éditeur</h1>
+  <div class="fr-callout"><p class="fr-callout__text">Vous développez un logiciel pour des professionnels de santé, qui héberge des données de santé et doit authentifier ses utilisateurs.</p></div>
+  <ul class="fr-btns-group fr-btns-group--inline-md fr-btns-group--sm">
+    <li><button class="fr-btn fr-btn--secondary fr-icon-printer-line fr-btn--icon-left">Imprimer</button></li>
+    <li><button class="fr-btn fr-btn--secondary fr-icon-links-line fr-btn--icon-left">Copier le lien de ce résultat</button></li>
+    <li><a class="fr-btn fr-btn--tertiary" href="demarrer.html">Refaire le questionnaire</a></li>
+  </ul>
+
+  <h2 class="fr-mt-4w">Les 10 étapes pour votre solution</h2>
+  <ol class="frise">
+    <li class="done"><strong>Comprendre l'écosystème</strong><p class="meta">Lire l'introduction</p></li>
+    <li><strong>Règles applicables</strong><p class="meta">PGSSI-S, HDS : 2 fiches</p></li>
+    <li><strong>Services socles</strong><p class="meta">Pro Santé Connect, MSSanté : 2 fiches</p></li>
+    <li class="todo"><strong>Spécifications et API</strong></li>
+    <li class="todo"><strong>Développer</strong></li>
+    <li class="todo"><strong>Tester dans les sandbox</strong><p class="meta">Bac à sable PSC</p></li>
+    <li class="todo"><strong>Vérifier ma conformité</strong></li>
+    <li class="todo"><strong>Me référencer, m'homologuer</strong></li>
+    <li class="todo"><strong>Passer en production</strong></li>
+    <li class="todo"><strong>Suivre les évolutions</strong></li>
+  </ol>
+
+  <h2 class="fr-mt-4w">Les briques qui vous concernent</h2>
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-12 fr-col-md-6 fr-col-lg-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="service-psc.html">Pro Santé Connect</a></h3>
+      <p class="fr-card__desc">Authentifier un professionnel de santé (OpenID Connect).</p>
+      <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--blue-ecume fr-badge--sm">Identité</p></li><li>{{REC}}</li></ul></div>
+    </div></div></div></div>
+    <div class="fr-col-12 fr-col-md-6 fr-col-lg-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="#">HDS</a></h3>
+      <p class="fr-card__desc">Hébergement de données de santé : ce que cela implique pour votre solution.</p>
+      <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--green-menthe fr-badge--sm">Sécurité et confiance</p></li></ul></div>
+    </div></div></div></div>
+    <div class="fr-col-12 fr-col-md-6 fr-col-lg-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="#">MSSanté</a></h3>
+      <p class="fr-card__desc">Messagerie sécurisée de santé.</p>
+      <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--purple-glycine fr-badge--sm">Services et données</p></li><li>{{SUP}}</li></ul></div>
+    </div></div></div></div>
+  </div>
+</div>

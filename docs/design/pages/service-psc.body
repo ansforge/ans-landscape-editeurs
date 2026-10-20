@@ -1,0 +1,68 @@
+<!-- Fiche service – Pro Santé Connect -->
+<!-- services -->
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" href="services.html">Services</a></li>
+    <li><a class="fr-breadcrumb__link" href="services.html">Identité</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Pro Santé Connect</a></li></ol></div></nav>
+
+  <div class="fr-grid-row fr-grid-row--middle fr-grid-row--gutters">
+    <div class="fr-col"><h1 class="fr-mb-1w">Pro Santé Connect</h1><p class="fr-text--lead fr-mb-0">Authentifier un professionnel de santé (OpenID Connect).</p></div>
+    <div class="fr-col-auto">{{REC}} <span class="meta">Version x.y</span></div>
+  </div>
+  <ul class="fr-btns-group fr-btns-group--inline-md fr-mt-2w">
+    <li><a class="fr-btn" target="_blank" rel="noopener" href="#">Documentation officielle <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+    <li><a class="fr-btn fr-btn--secondary" target="_blank" rel="noopener" href="tests.html">Accéder au bac à sable <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+  </ul>
+
+  <div class="fr-grid-row fr-grid-row--gutters fr-mt-4w">
+    <div class="fr-col-12 fr-col-md-3">
+      <nav class="fr-summary sommaire-sticky" role="navigation" aria-labelledby="som"><p class="fr-summary__title" id="som">Sommaire</p><ol class="fr-summary__list">
+        <li><a class="fr-summary__link" href="#presentation">Présentation</a></li>
+        <li><a class="fr-summary__link" href="#ressources">Ressources</a></li>
+        <li><a class="fr-summary__link" href="#versions">Versions</a></li>
+        <li><a class="fr-summary__link" href="#prerequis">Prérequis</a></li>
+        <li><a class="fr-summary__link" href="#suivi">Suivi</a></li></ol></nav>
+    </div>
+    <div class="fr-col-12 fr-col-md-9">
+      <section id="presentation"><h2>Présentation</h2>
+        <h3 class="fr-h5">À quoi ça sert ?</h3><p>Texte court (2 à 3 phrases). Le détail reste dans la documentation officielle.</p>
+        <h3 class="fr-h5">Qui est concerné ?</h3><p>Éditeurs et intégrateurs dont le logiciel doit identifier un professionnel de santé.</p>
+        <h3 class="fr-h5">Quand l'utiliser ?</h3><p>Votre logiciel donne accès à des données ou à des actions réservées à un professionnel.</p>
+      </section>
+
+      <section id="ressources" class="fr-mt-4w"><h2>Ressources</h2>
+        <div class="fr-grid-row fr-grid-row--gutters">
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Documentation</h3><p><a target="_blank" rel="noopener" href="#">Documentation officielle <span class="fr-sr-only">(nouvelle fenêtre)</span></a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Spécification OIDC</h3><p><a target="_blank" rel="noopener" href="#">Spécification <span class="fr-sr-only">(nouvelle fenêtre)</span></a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Environnement de test</h3><p><a href="tests.html">Bac à sable et identités de test</a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Exemples et SDK</h3><p>Java, JavaScript, curl <span class="fr-badge fr-badge--sm fr-badge--info">À venir</span></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Code source</h3><p>Non applicable</p></div></div>
+        </div>
+      </section>
+
+      <section id="versions" class="fr-mt-4w"><h2>Versions</h2>
+        <div class="fr-table"><div class="fr-table__wrapper"><div class="fr-table__container"><div class="fr-table__content">
+          <table><caption class="fr-sr-only">Versions de Pro Santé Connect</caption>
+          <thead><tr><th scope="col">Version</th><th scope="col">Statut</th><th scope="col">Fin de support</th><th scope="col">Notes de version</th></tr></thead>
+          <tbody>
+            <tr><td>x.y</td><td>{{REC}}</td><td>—</td><td><a href="#">Notes</a></td></tr>
+            <tr><td>x.(y-1)</td><td>{{DEP}}</td><td>jj/mm/aaaa</td><td><a href="#">Notes</a></td></tr>
+          </tbody></table></div></div></div></div>
+        <p><strong>Prochaine évolution :</strong> x.(y+1), prévue … <br><strong>Breaking changes :</strong> aucun annoncé.</p>
+      </section>
+
+      <section id="prerequis" class="fr-mt-4w"><h2>Prérequis</h2>
+        <ul><li><strong>Sécurité :</strong> à préciser</li><li><strong>Conformité :</strong> à préciser</li><li><strong>Référencement :</strong> oui, voir le parcours « Je prépare le référencement »</li></ul>
+      </section>
+
+      <section id="suivi" class="fr-mt-4w"><h2>Suivi</h2>
+        <ul><li><a href="#">Support</a></li><li><a href="#">Statut du service</a></li><li><a href="#">Roadmap</a></li></ul>
+      </section>
+
+      <hr>
+      <p class="meta">Référent de la fiche : … · Dernière mise à jour : jj/mm/aaaa · <a href="#">Signaler une erreur sur cette fiche</a></p>
+    </div>
+  </div>
+</div>

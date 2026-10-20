@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-scheme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fiche service – Pro Santé Connect – Portail développeurs du numérique en santé (maquette)</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/utility/icons/icons.min.css">
+<link rel="stylesheet" href="maquette.css">
+</head>
+<body>
+<div class="maquette-bandeau">Maquette de conception – données fictives, à ne pas publier</div>
+<header role="banner" class="fr-header">
+  <div class="fr-header__body"><div class="fr-container"><div class="fr-header__body-row">
+    <div class="fr-header__brand fr-enlarge-link">
+      <div class="fr-header__brand-top">
+        <div class="fr-header__logo"><p class="fr-logo">République<br>Française</p></div>
+        <div class="fr-header__navbar">
+          <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-menu" aria-haspopup="menu" title="Menu">Menu</button>
+        </div>
+      </div>
+      <div class="fr-header__service">
+        <a href="index.html" title="Accueil – Portail développeurs du numérique en santé"><p class="fr-header__service-title">Portail développeurs du numérique en santé</p></a>
+        <p class="fr-header__service-tagline">Construire, tester et intégrer des services numériques en santé</p>
+      </div>
+    </div>
+    <div class="fr-header__tools"><div class="fr-header__search fr-modal" id="modal-search">
+      <div class="fr-search-bar" role="search"><label class="fr-label" for="q">Rechercher</label>
+      <input class="fr-input" placeholder="Rechercher un service, une API…" type="search" id="q"><button class="fr-btn" title="Rechercher">Rechercher</button></div>
+    </div></div>
+  </div></div></div>
+  <div class="fr-header__menu fr-modal" id="modal-menu"><div class="fr-container">
+    <button class="fr-btn--close fr-btn" aria-controls="modal-menu">Fermer</button>
+    <nav class="fr-nav" role="navigation" aria-label="Menu principal"><ul class="fr-nav__list">
+      <li class="fr-nav__item"><a class="fr-nav__link" href="demarrer.html" >Démarrer</a></li>
+      <li class="fr-nav__item"><a class="fr-nav__link" href="services.html" aria-current="page">Services</a></li>
+      <li class="fr-nav__item"><a class="fr-nav__link" href="versions.html" >Versions</a></li>
+      <li class="fr-nav__item"><a class="fr-nav__link" href="parcours.html" >Parcours</a></li>
+      <li class="fr-nav__item"><a class="fr-nav__link" href="tests.html" >Tests</a></li>
+      <li class="fr-nav__item"><a class="fr-nav__link" href="#support">Support</a></li>
+    </ul></nav>
+  </div></div>
+</header>
+<main role="main" id="contenu">
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" href="services.html">Services</a></li>
+    <li><a class="fr-breadcrumb__link" href="services.html">Identité</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Pro Santé Connect</a></li></ol></div></nav>
+
+  <div class="fr-grid-row fr-grid-row--middle fr-grid-row--gutters">
+    <div class="fr-col"><h1 class="fr-mb-1w">Pro Santé Connect</h1><p class="fr-text--lead fr-mb-0">Authentifier un professionnel de santé (OpenID Connect).</p></div>
+    <div class="fr-col-auto"><span class="statut statut--rec"><span aria-hidden="true">●</span> Recommandée</span> <span class="meta">Version x.y</span></div>
+  </div>
+  <ul class="fr-btns-group fr-btns-group--inline-md fr-mt-2w">
+    <li><a class="fr-btn" target="_blank" rel="noopener" href="#">Documentation officielle <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+    <li><a class="fr-btn fr-btn--secondary" target="_blank" rel="noopener" href="tests.html">Accéder au bac à sable <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+  </ul>
+
+  <div class="fr-grid-row fr-grid-row--gutters fr-mt-4w">
+    <div class="fr-col-12 fr-col-md-3">
+      <nav class="fr-summary sommaire-sticky" role="navigation" aria-labelledby="som"><p class="fr-summary__title" id="som">Sommaire</p><ol class="fr-summary__list">
+        <li><a class="fr-summary__link" href="#presentation">Présentation</a></li>
+        <li><a class="fr-summary__link" href="#ressources">Ressources</a></li>
+        <li><a class="fr-summary__link" href="#versions">Versions</a></li>
+        <li><a class="fr-summary__link" href="#prerequis">Prérequis</a></li>
+        <li><a class="fr-summary__link" href="#suivi">Suivi</a></li></ol></nav>
+    </div>
+    <div class="fr-col-12 fr-col-md-9">
+      <section id="presentation"><h2>Présentation</h2>
+        <h3 class="fr-h5">À quoi ça sert ?</h3><p>Texte court (2 à 3 phrases). Le détail reste dans la documentation officielle.</p>
+        <h3 class="fr-h5">Qui est concerné ?</h3><p>Éditeurs et intégrateurs dont le logiciel doit identifier un professionnel de santé.</p>
+        <h3 class="fr-h5">Quand l'utiliser ?</h3><p>Votre logiciel donne accès à des données ou à des actions réservées à un professionnel.</p>
+      </section>
+
+      <section id="ressources" class="fr-mt-4w"><h2>Ressources</h2>
+        <div class="fr-grid-row fr-grid-row--gutters">
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Documentation</h3><p><a target="_blank" rel="noopener" href="#">Documentation officielle <span class="fr-sr-only">(nouvelle fenêtre)</span></a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Spécification OIDC</h3><p><a target="_blank" rel="noopener" href="#">Spécification <span class="fr-sr-only">(nouvelle fenêtre)</span></a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Environnement de test</h3><p><a href="tests.html">Bac à sable et identités de test</a></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Exemples et SDK</h3><p>Java, JavaScript, curl <span class="fr-badge fr-badge--sm fr-badge--info">À venir</span></p></div></div>
+          <div class="fr-col-12 fr-col-md-6"><div class="res-bloc"><h3 class="fr-h6">Code source</h3><p>Non applicable</p></div></div>
+        </div>
+      </section>
+
+      <section id="versions" class="fr-mt-4w"><h2>Versions</h2>
+        <div class="fr-table"><div class="fr-table__wrapper"><div class="fr-table__container"><div class="fr-table__content">
+          <table><caption class="fr-sr-only">Versions de Pro Santé Connect</caption>
+          <thead><tr><th scope="col">Version</th><th scope="col">Statut</th><th scope="col">Fin de support</th><th scope="col">Notes de version</th></tr></thead>
+          <tbody>
+            <tr><td>x.y</td><td><span class="statut statut--rec"><span aria-hidden="true">●</span> Recommandée</span></td><td>—</td><td><a href="#">Notes</a></td></tr>
+            <tr><td>x.(y-1)</td><td><span class="statut statut--dep"><span aria-hidden="true">▲</span> Dépréciée</span></td><td>jj/mm/aaaa</td><td><a href="#">Notes</a></td></tr>
+          </tbody></table></div></div></div></div>
+        <p><strong>Prochaine évolution :</strong> x.(y+1), prévue … <br><strong>Breaking changes :</strong> aucun annoncé.</p>
+      </section>
+
+      <section id="prerequis" class="fr-mt-4w"><h2>Prérequis</h2>
+        <ul><li><strong>Sécurité :</strong> à préciser</li><li><strong>Conformité :</strong> à préciser</li><li><strong>Référencement :</strong> oui, voir le parcours « Je prépare le référencement »</li></ul>
+      </section>
+
+      <section id="suivi" class="fr-mt-4w"><h2>Suivi</h2>
+        <ul><li><a href="#">Support</a></li><li><a href="#">Statut du service</a></li><li><a href="#">Roadmap</a></li></ul>
+      </section>
+
+      <hr>
+      <p class="meta">Référent de la fiche : … · Dernière mise à jour : jj/mm/aaaa · <a href="#">Signaler une erreur sur cette fiche</a></p>
+    </div>
+  </div>
+</div>
+</main>
+<footer class="fr-footer" role="contentinfo" id="support"><div class="fr-container">
+  <div class="fr-footer__body"><div class="fr-footer__brand fr-enlarge-link"><p class="fr-logo">République<br>Française</p></div>
+  <div class="fr-footer__content"><p class="fr-footer__content-desc">Portail développeurs du numérique en santé. Les contenus réglementaires et les documentations restent publiés par leurs propriétaires : ce portail les relie et les rend actionnables.</p>
+  <ul class="fr-footer__content-list">
+    <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener" href="#">esante.gouv.fr <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+    <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener" href="#">G_NIUS <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+    <li class="fr-footer__content-item"><a class="fr-footer__content-link" target="_blank" rel="noopener" href="#">Doctrine du numérique en santé <span class="fr-sr-only">(nouvelle fenêtre)</span></a></li>
+  </ul></div></div>
+  <div class="fr-footer__bottom"><ul class="fr-footer__bottom-list">
+    <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme (audit à réaliser)</a></li>
+    <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Mentions légales</a></li>
+    <li class="fr-footer__bottom-item"><a class="fr-footer__bottom-link" href="#">Signaler un problème</a></li>
+  </ul></div>
+</div></footer>
+<script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.12.1/dist/dsfr.module.min.js"></script>
+</body></html>

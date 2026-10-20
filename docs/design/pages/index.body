@@ -1,0 +1,58 @@
+<!-- Accueil -->
+<!-- accueil -->
+<section class="hero"><div class="fr-container">
+  <h1>Je développe un service numérique en santé</h1>
+  <p class="fr-text--lead">Tout ce dont j'ai besoin pour construire et intégrer ma solution dans l'écosystème français du numérique en santé.</p>
+  <div class="fr-search-bar fr-search-bar--lg" role="search">
+    <label class="fr-label" for="besoin">Que voulez-vous faire ?</label>
+    <input class="fr-input" id="besoin" type="search" placeholder="Que voulez-vous faire ? Ex. : authentifier un professionnel">
+    <button class="fr-btn" title="Rechercher">Rechercher</button>
+  </div>
+</div></section>
+
+<div class="fr-container fr-my-6w">
+  <h2 class="fr-sr-only">Par où commencer ?</h2>
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-12 fr-col-md-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="demarrer.html">Je démarre</a></h3>
+      <p class="fr-card__desc">Je ne sais pas encore ce qui s'applique à mon produit. Six questions pour obtenir mon parcours éditeur.</p>
+    </div></div></div></div>
+    <div class="fr-col-12 fr-col-md-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="services.html">Je connais mon besoin</a></h3>
+      <p class="fr-card__desc">Identité, interopérabilité, sécurité, services et données, tests : le catalogue des briques par thème.</p>
+    </div></div></div></div>
+    <div class="fr-col-12 fr-col-md-4"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+      <h3 class="fr-card__title"><a href="services.html">Je veux tout voir</a></h3>
+      <p class="fr-card__desc">Le catalogue complet des services pour développeurs, avec filtres.</p>
+    </div></div></div></div>
+  </div>
+
+  <h2 class="fr-mt-6w">Parcours les plus demandés</h2>
+  <ul class="fr-links-group">
+    <li><a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="parcours.html">J'authentifie un professionnel</a></li>
+    <li><a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="parcours.html">J'échange des données de santé</a></li>
+    <li><a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="parcours.html">Je prépare le référencement de mon logiciel</a></li>
+  </ul>
+
+  <div class="testnow fr-mt-6w">
+    <h2 class="fr-h4">Tester maintenant</h2>
+    <p>Les environnements de test sont accessibles dès l'accueil.</p>
+    <ul class="fr-btns-group fr-btns-group--inline-md">
+      <li><a class="fr-btn" href="tests.html">Bac à sable Pro Santé Connect</a></li>
+      <li><a class="fr-btn fr-btn--secondary" href="tests.html">Identités de test</a></li>
+      <li><a class="fr-btn fr-btn--secondary" href="tests.html">EDIT</a></li>
+    </ul>
+  </div>
+
+  <h2 class="fr-mt-6w">Dernières évolutions</h2>
+  <div class="fr-table"><div class="fr-table__wrapper"><div class="fr-table__container"><div class="fr-table__content">
+    <table><caption class="fr-sr-only">Dernières évolutions</caption>
+    <thead><tr><th scope="col">Date</th><th scope="col">Service</th><th scope="col">Évolution</th></tr></thead>
+    <tbody>
+      <tr><td>jj/mm/aaaa</td><td>Pro Santé Connect</td><td>Nouvelle version x.y publiée, voir la fiche</td></tr>
+      <tr><td>jj/mm/aaaa</td><td>CI-SIS</td><td>Version x.y passée en « Dépréciée »</td></tr>
+      <tr><td>jj/mm/aaaa</td><td>MSSanté</td><td>Nouvel environnement de test</td></tr>
+    </tbody></table>
+  </div></div></div></div>
+  <p class="meta">Ces lignes sont alimentées automatiquement par les données du dépôt.</p>
+</div>

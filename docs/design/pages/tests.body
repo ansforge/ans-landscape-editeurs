@@ -1,0 +1,24 @@
+<!-- Environnements de test -->
+<!-- tests -->
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Environnements de test</a></li></ol></div></nav>
+
+  <h1>Environnements de test</h1>
+  <p class="fr-text--lead">Testez votre intégration avec des identités et des données fictives, avant de demander un référencement.</p>
+
+  <div class="fr-callout"><h2 class="fr-callout__title fr-h5">Exemple : SI-Cœur</h2>
+    <p class="fr-callout__text">Le SI-Cœur propose un bac à sable Pro Santé Connect et EDIT. Vous y créez des identités de test, vous testez votre connexion et vos règles métier.</p>
+    <a class="fr-btn" target="_blank" rel="noopener" href="#">Ouvrir le bac à sable <span class="fr-sr-only">(nouvelle fenêtre)</span></a></div>
+
+  <div class="fr-table fr-mt-4w"><div class="fr-table__wrapper"><div class="fr-table__container"><div class="fr-table__content">
+    <table><caption class="fr-sr-only">Environnements de test disponibles</caption>
+    <thead><tr><th scope="col">Service</th><th scope="col">Ce que vous pouvez tester</th><th scope="col">Identités et données de test</th><th scope="col">Limites connues</th><th scope="col">Accès</th></tr></thead>
+    <tbody>
+      <tr><th scope="row"><a href="service-psc.html">Pro Santé Connect</a></th><td>Connexion, règles métier</td><td>Création via EDIT</td><td>À préciser</td><td><a href="#">Bac à sable</a></td></tr>
+      <tr><th scope="row">MSSanté</th><td>À préciser</td><td>À préciser</td><td>À préciser</td><td><a href="#">Environnement</a></td></tr>
+      <tr><th scope="row">CI-SIS</th><td colspan="4"><span class="fr-badge fr-badge--sm fr-badge--info">Aucun environnement de test à ce jour</span></td></tr>
+    </tbody></table>
+  </div></div></div></div>
+</div>

@@ -1,0 +1,60 @@
+<!-- Catalogue des services -->
+<!-- services -->
+<div class="fr-container fr-my-6w">
+  <nav role="navigation" class="fr-breadcrumb" aria-label="vous êtes ici :"><div class="fr-collapse" id="bc"><ol class="fr-breadcrumb__list">
+    <li><a class="fr-breadcrumb__link" href="index.html">Accueil</a></li>
+    <li><a class="fr-breadcrumb__link" aria-current="page">Services</a></li></ol></div></nav>
+
+  <h1>Catalogue des services pour développeurs</h1>
+  <div class="fr-grid-row fr-grid-row--gutters">
+    <div class="fr-col-12 fr-col-md-3">
+      <form>
+        <fieldset class="fr-fieldset"><legend class="fr-fieldset__legend">Thème</legend>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="t1"><label class="fr-label" for="t1">Identité</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="t2"><label class="fr-label" for="t2">Interopérabilité</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="t3"><label class="fr-label" for="t3">Sécurité et confiance</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="t4"><label class="fr-label" for="t4">Services et données</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="t5"><label class="fr-label" for="t5">Tests</label></div></div>
+        </fieldset>
+        <fieldset class="fr-fieldset"><legend class="fr-fieldset__legend">Disponible</legend>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="f1"><label class="fr-label" for="f1">Avec un bac à sable</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="f2"><label class="fr-label" for="f2">Avec une API</label></div></div>
+          <div class="fr-fieldset__element"><div class="fr-checkbox-group fr-checkbox-group--sm"><input type="checkbox" id="f3"><label class="fr-label" for="f3">Nécessite un référencement</label></div></div>
+        </fieldset>
+        <div class="fr-select-group"><label class="fr-label" for="s">Statut de version</label>
+          <select class="fr-select" id="s"><option>Tous</option><option>Recommandée</option><option>Supportée</option><option>Dépréciée</option><option>Fin de vie</option><option>Expérimentale</option></select></div>
+      </form>
+    </div>
+    <div class="fr-col-12 fr-col-md-9">
+      <p role="status" aria-live="polite"><strong>12 services</strong></p>
+      <div class="fr-grid-row fr-grid-row--gutters">
+        <div class="fr-col-12 fr-col-lg-6"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+          <h2 class="fr-card__title fr-h5"><a href="service-psc.html">Pro Santé Connect</a></h2>
+          <p class="fr-card__desc">Authentifier un professionnel de santé.</p>
+          <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--blue-ecume fr-badge--sm">Identité</p></li><li>{{REC}}</li></ul></div>
+          <div class="fr-card__end"><p class="fr-card__detail fr-icon-test-tube-line">Bac à sable · API · Référencement</p></div>
+        </div></div></div></div>
+        <div class="fr-col-12 fr-col-lg-6"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+          <h2 class="fr-card__title fr-h5"><a href="#">CI-SIS</a></h2>
+          <p class="fr-card__desc">Cadre d'interopérabilité des systèmes d'information de santé.</p>
+          <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--green-menthe fr-badge--sm">Interopérabilité</p></li><li>{{SUP}}</li></ul></div>
+          <div class="fr-card__end"><p class="fr-card__detail">Spécifications</p></div>
+        </div></div></div></div>
+        <div class="fr-col-12 fr-col-lg-6"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+          <h2 class="fr-card__title fr-h5"><a href="#">MSSanté</a></h2>
+          <p class="fr-card__desc">Messagerie sécurisée de santé.</p>
+          <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--purple-glycine fr-badge--sm">Services et données</p></li><li>{{SUP}}</li></ul></div>
+        </div></div></div></div>
+        <div class="fr-col-12 fr-col-lg-6"><div class="fr-card fr-enlarge-link"><div class="fr-card__body"><div class="fr-card__content">
+          <h2 class="fr-card__title fr-h5"><a href="#">ROR</a></h2>
+          <p class="fr-card__desc">Référentiel opérationnel des ressources.</p>
+          <div class="fr-card__start"><ul class="fr-badges-group"><li><p class="fr-badge fr-badge--purple-glycine fr-badge--sm">Services et données</p></li><li>{{DEP}}</li></ul></div>
+        </div></div></div></div>
+      </div>
+      <nav role="navigation" class="fr-pagination fr-mt-4w" aria-label="Pagination"><ul class="fr-pagination__list">
+        <li><a class="fr-pagination__link" aria-current="page" title="Page 1">1</a></li>
+        <li><a class="fr-pagination__link" href="#" title="Page 2">2</a></li></ul></nav>
+      <p class="meta">Données d'exemple, les libellés des briques sont à valider par le référent.</p>
+    </div>
+  </div>
+</div>
