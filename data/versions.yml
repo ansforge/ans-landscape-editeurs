@@ -1,38 +1,51 @@
-# Versions par service. Une seule version `recommended` par service (vérifié en CI).
-# Statuts : recommended | supported | deprecated | eol | experimental
-# `verified: false` : la ligne est un gabarit à compléter, le site affiche « À vérifier »
-# à la place du statut. Passer à `true` quand la version, le statut et les dates sont confirmés.
-# Schéma : schemas/versions.schema.json
-
+# Version publique filtrée - 2026-10-21
+# Ne contient ni donnée personnelle, ni coordonnée individuelle, ni information d’infrastructure interne, ni secret.
+# Les informations non confirmées restent explicitement marquées comme telles.
 - service: prosante-connect
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: e-cps
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: pro-sante-identite
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: ci-sis
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: fhir-terminologies
-  version: À renseigner
+  version: À confirmer sur la source officielle
+  status: supported
+  verified: false
+- service: pgssi-s
+  version: À confirmer sur la source officielle
+  status: supported
+  verified: false
+- service: hds
+  version: À confirmer sur la source officielle
+  status: supported
+  verified: false
+- service: rpps
+  version: À confirmer sur la source officielle
+  status: supported
+  verified: false
+- service: finess
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: ror
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: mssante
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
 - service: si-coeur
-  version: À renseigner
+  version: À confirmer sur la source officielle
   status: supported
   verified: false
