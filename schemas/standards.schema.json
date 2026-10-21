@@ -1,0 +1,18 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "standards.yml",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "kind", "summary", "link", "services"],
+    "properties": {
+      "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "name": { "type": "string", "minLength": 1 },
+      "kind": { "enum": ["doctrine", "referentiel", "demarche", "guichet"] },
+      "summary": { "type": "string", "minLength": 1 },
+      "link": { "type": "string", "format": "uri" },
+      "services": { "type": "array", "items": { "type": "string" } }
+    }
+  }
+}

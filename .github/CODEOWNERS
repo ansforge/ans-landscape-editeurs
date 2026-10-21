@@ -1,0 +1,3 @@
+# Un référent par fiche : il relit les modifications de data/ qui concernent son service.
+# Aujourd'hui, un seul référent pour tout le dépôt. À corriger si l'identifiant GitHub est différent.
+* @mfaurel

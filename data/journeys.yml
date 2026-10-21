@@ -1,0 +1,158 @@
+# Parcours éditeur : étapes, questionnaire « Je démarre », règles et parcours pilotes.
+# Schéma : schemas/journeys.schema.json
+#
+# Règles : chaque règle s'applique quand TOUTES les conditions de `when` sont remplies
+# (la réponse à la question est l'une des valeurs listées). Une règle ajoute des services
+# avec un niveau : `certain` (s'applique) ou `maybe` (à confirmer). Si un service est ajouté
+# plusieurs fois, le niveau `certain` l'emporte.
+
+steps:
+  - id: comprendre
+    title: Comprendre l'écosystème
+    objective: Situer votre solution dans l'écosystème numérique en santé et ses acteurs.
+    actions:
+      - Lire la Doctrine du numérique en santé.
+      - Repérer les services socles et les référentiels qui concernent votre type de solution.
+    standards: [doctrine]
+  - id: regles
+    title: Identifier les règles applicables
+    objective: Savoir quelles règles de sécurité et de conformité s'appliquent à votre produit.
+    actions:
+      - Vérifier si vous traitez ou hébergez des données de santé.
+      - Lire les référentiels de la PGSSI-S qui vous concernent.
+    themes: [securite]
+    standards: [referentiel-identification]
+  - id: socles
+    title: Choisir les services socles
+    objective: Retenir les briques à intégrer pour l'identité, les échanges et les données.
+    actions:
+      - Choisir les services d'identité, d'interopérabilité et de données dont vous avez besoin.
+      - Lire la fiche de chaque service pour connaître ses prérequis.
+    themes: [identite, interop, donnees]
+  - id: specifications
+    title: Accéder aux spécifications et aux API
+    objective: Trouver les spécifications et les API officielles de chaque brique.
+    actions:
+      - Ouvrir la documentation officielle de chaque service retenu.
+      - Noter la version recommandée dans le Version Center.
+    themes: [identite, interop, donnees]
+  - id: developper
+    title: Développer
+    objective: Intégrer les services retenus dans votre solution.
+    actions:
+      - Suivre les spécifications officielles et les exemples d'intégration.
+      - Surveiller les évolutions et les changements de version annoncés.
+  - id: tester
+    title: Tester dans les bacs à sable
+    objective: Valider votre intégration avec des identités et des données de test.
+    actions:
+      - Demander l'accès aux bacs à sable disponibles.
+      - Créer des identités de test et jouer vos scénarios métier.
+    needs: sandbox
+  - id: conformite
+    title: Vérifier ma conformité
+    objective: Contrôler que votre solution respecte les exigences applicables.
+    actions:
+      - Reprendre la liste des prérequis de chaque fiche service.
+      - Préparer les justificatifs attendus pour l'homologation.
+    standards: [homologation]
+    themes: [securite]
+  - id: referencement
+    title: Me référencer, m'homologuer
+    objective: Déposer votre demande de référencement ou d'homologation auprès du bon guichet.
+    actions:
+      - Vérifier les conditions de référencement sur G_NIUS.
+      - Constituer et déposer le dossier.
+    standards: [gnius]
+    flag: referencement
+  - id: production
+    title: Passer en production
+    objective: Ouvrir votre solution à ses utilisateurs réels.
+    actions:
+      - Vérifier que les accès de production sont ouverts pour chaque service.
+      - Mettre en place le suivi des incidents et des statuts de service.
+  - id: evolutions
+    title: Suivre les évolutions
+    objective: Rester conforme dans le temps.
+    actions:
+      - Consulter régulièrement le Version Center.
+      - Planifier les migrations quand une version devient dépréciée.
+
+questions:
+  - id: q1
+    label: Quel type de solution développez-vous ?
+    options:
+      - { id: logiciel-pro, label: Un logiciel pour des professionnels ou des établissements de santé }
+      - { id: service-usager, label: Un service ou une application pour les usagers }
+      - { id: service-donnees, label: Une plateforme ou un service d'échange de données }
+      - { id: nsp, label: Je ne sais pas, hint: Nous vous montrerons les cas les plus courants. }
+  - id: q2
+    label: Pour quel utilisateur ?
+    options:
+      - { id: pro, label: Professionnels de santé }
+      - { id: usager, label: "Usagers, patients" }
+      - { id: both, label: Les deux }
+      - { id: nsp, label: Je ne sais pas, hint: Nous vous montrerons les deux cas. }
+  - id: q3
+    label: Manipulez-vous des données de santé ?
+    options:
+      - { id: oui, label: Oui }
+      - { id: non, label: Non }
+      - { id: nsp, label: Je ne sais pas }
+  - id: q4
+    label: Devez-vous authentifier un professionnel ?
+    options:
+      - { id: oui, label: Oui }
+      - { id: non, label: Non }
+      - { id: nsp, label: Je ne sais pas }
+  - id: q5
+    label: Échangez-vous des données avec d'autres systèmes d'information ?
+    options:
+      - { id: oui, label: Oui }
+      - { id: non, label: Non }
+      - { id: nsp, label: Je ne sais pas }
+  - id: q6
+    label: Êtes-vous concerné par un référencement ?
+    options:
+      - { id: oui, label: Oui }
+      - { id: non, label: Non }
+      - { id: nsp, label: Je ne sais pas }
+
+rules:
+  - when: { q3: [oui] }
+    services: [{ id: hds, level: certain }, { id: pgssi-s, level: certain }]
+  - when: { q3: [nsp] }
+    services: [{ id: hds, level: maybe }, { id: pgssi-s, level: maybe }]
+  - when: { q4: [oui] }
+    services: [{ id: prosante-connect, level: certain }, { id: e-cps, level: maybe }, { id: si-coeur, level: certain }]
+  - when: { q4: [nsp] }
+    services: [{ id: prosante-connect, level: maybe }]
+  - when: { q5: [oui] }
+    services: [{ id: ci-sis, level: certain }, { id: fhir-terminologies, level: certain }, { id: mssante, level: maybe }]
+  - when: { q5: [nsp] }
+    services: [{ id: ci-sis, level: maybe }]
+  - when: { q1: [service-donnees] }
+    services: [{ id: ci-sis, level: certain }, { id: fhir-terminologies, level: certain }, { id: rpps, level: maybe }]
+  - when: { q1: [logiciel-pro] }
+    services: [{ id: rpps, level: maybe }, { id: finess, level: maybe }]
+  - when: { q2: [pro, both] }
+    services: [{ id: rpps, level: maybe }]
+  - when: { q6: [oui] }
+    standards: [homologation, gnius]
+    flags: [referencement]
+  - when: { q6: [nsp] }
+    standards: [gnius]
+
+pilots:
+  - id: authentifier-un-professionnel
+    title: J'authentifie un professionnel
+    summary: Pro Santé Connect, e-CPS et le bac à sable pour tester.
+    answers: { q1: logiciel-pro, q2: pro, q3: oui, q4: oui, q5: non, q6: non }
+  - id: echanger-des-donnees-de-sante
+    title: J'échange des données de santé
+    summary: CI-SIS, FHIR, MSSanté et les règles de sécurité.
+    answers: { q1: service-donnees, q2: pro, q3: oui, q4: non, q5: oui, q6: non }
+  - id: preparer-le-referencement
+    title: Je prépare le référencement de mon logiciel
+    summary: PGSSI-S, HDS, homologation et dépôt du dossier.
+    answers: { q1: logiciel-pro, q2: pro, q3: oui, q4: oui, q5: oui, q6: oui }

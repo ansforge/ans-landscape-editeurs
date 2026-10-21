@@ -1,0 +1,65 @@
+/* DSFR : styles du Système de Design de l'État (polices, icônes et composants). */
+@import '@gouvfr/dsfr/dist/core/core.min.css';
+@import '@gouvfr/dsfr/dist/component/component.min.css';
+@import '@gouvfr/dsfr/dist/utility/icons/icons.min.css';
+@import '@gouvfr/dsfr/dist/utility/utility.min.css';
+
+/* Docusaurus charge Infima avant ce fichier : on rétablit les valeurs DSFR sur les éléments nus. */
+html { scroll-behavior: auto; }
+body {
+  font-family: Marianne, arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--text-default-grey);
+  background-color: var(--background-default-grey);
+}
+table { display: table; width: auto; margin: 0; border-collapse: collapse; }
+table tr, table th, table td { background: none; border: 0; }
+table tr:nth-child(2n) { background: none; }
+ul, ol { margin: 0; }
+hr { background-color: var(--border-default-grey); height: 1px; border: 0; margin: 2rem 0; }
+code { background: var(--background-contrast-grey); border: 0; padding: 0 .25rem; }
+
+#__docusaurus { display: flex; flex-direction: column; min-height: 100vh; }
+#__docusaurus > main, #__docusaurus main[role='main'] { flex: 1 0 auto; }
+
+/* Statuts de version : icône + texte + couleur */
+.statut {
+  display: inline-flex; gap: .35rem; align-items: center; font-weight: 700; font-size: .875rem;
+  padding: .1rem .6rem; border-radius: 1rem; border: 1px solid currentColor; white-space: nowrap;
+}
+.statut--rec { color: #18753c; background: #b8fec9; }
+.statut--sup { color: #0063cb; background: #e8edff; }
+.statut--dep { color: #7b4a00; background: #ffe9a8; }
+.statut--eol { color: #ce0500; background: #ffe9e9; }
+.statut--exp { color: #6e445a; background: #fee7fc; }
+.statut--unv { color: #3a3a3a; background: #eee; }
+
+.hero { background: var(--background-alt-blue-france); padding: 3rem 0; }
+.testnow { border-left: 4px solid var(--border-action-high-blue-france); padding: 1rem 1.5rem; background: var(--background-alt-grey); }
+.meta { color: var(--text-mention-grey); font-size: .875rem; }
+.res-bloc { border: 1px solid var(--border-default-grey); padding: 1rem 1.5rem; height: 100%; }
+.res-bloc h3 { margin-bottom: .5rem; }
+.sommaire-sticky { position: sticky; top: 1rem; }
+
+.frise {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 1rem;
+  list-style: none; padding: 0; counter-reset: etape;
+}
+.frise > li { list-style: none; counter-increment: etape; border: 1px solid var(--border-default-grey); padding: 1rem; position: relative; }
+.frise > li::before {
+  content: counter(etape); display: flex; width: 2rem; height: 2rem; align-items: center; justify-content: center;
+  border-radius: 50%; background: var(--background-action-high-blue-france); color: #fff; font-weight: 700; margin-bottom: .5rem;
+}
+.frise > li.is-off { opacity: .6; border-style: dashed; }
+.frise > li.is-off::before { background: var(--background-disabled-grey); color: var(--text-disabled-grey); }
+
+.filtres { background: var(--background-alt-grey); padding: 1rem 1.5rem; }
+.plain-list { list-style: none; padding: 0; margin: 0; display: flex; gap: .75rem; flex-wrap: wrap; }
+.card-grid-equal > [class*='fr-col'] { display: flex; }
+.card-grid-equal .fr-card { width: 100%; }
+.status-cell { white-space: nowrap; }
+
+@media print {
+  .fr-header, .fr-footer, .fr-skiplinks, .no-print { display: none !important; }
+}

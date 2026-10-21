@@ -1,0 +1,34 @@
+{
+  "name": "portail-developpeurs-sante",
+  "version": "0.1.0",
+  "private": true,
+  "license": "Apache-2.0",
+  "description": "Portail développeurs du numérique en santé",
+  "scripts": {
+    "validate": "node scripts/validate.js",
+    "test": "node --test",
+    "check-links": "node scripts/check-links.js",
+    "prestart": "npm run validate && npm run export",
+    "start": "docusaurus start",
+    "prebuild": "npm run validate && npm run export",
+    "build": "docusaurus build",
+    "serve": "docusaurus serve",
+    "clear": "docusaurus clear",
+    "export": "node scripts/export-data.js"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@gouvfr/dsfr": "1.15.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "yaml": "^2.6.0"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

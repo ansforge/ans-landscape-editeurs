@@ -1,0 +1,38 @@
+# Versions par service. Une seule version `recommended` par service (vérifié en CI).
+# Statuts : recommended | supported | deprecated | eol | experimental
+# `verified: false` : la ligne est un gabarit à compléter, le site affiche « À vérifier »
+# à la place du statut. Passer à `true` quand la version, le statut et les dates sont confirmés.
+# Schéma : schemas/versions.schema.json
+
+- service: prosante-connect
+  version: À renseigner
+  status: supported
+  verified: false
+- service: e-cps
+  version: À renseigner
+  status: supported
+  verified: false
+- service: pro-sante-identite
+  version: À renseigner
+  status: supported
+  verified: false
+- service: ci-sis
+  version: À renseigner
+  status: supported
+  verified: false
+- service: fhir-terminologies
+  version: À renseigner
+  status: supported
+  verified: false
+- service: ror
+  version: À renseigner
+  status: supported
+  verified: false
+- service: mssante
+  version: À renseigner
+  status: supported
+  verified: false
+- service: si-coeur
+  version: À renseigner
+  status: supported
+  verified: false

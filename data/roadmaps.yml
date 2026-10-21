@@ -1,0 +1,9 @@
+# Prochaines évolutions annoncées par service.
+# Exemple :
+# - service: prosante-connect
+#   planned: "Version x.y prévue au T1 2027"
+#   breaking_changes: false
+#   link: https://...
+#   verified: true
+# Schéma : schemas/roadmaps.schema.json
+[]

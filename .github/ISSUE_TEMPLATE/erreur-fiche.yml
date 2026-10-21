@@ -1,0 +1,30 @@
+name: Erreur ou information manquante
+description: Une fiche, un lien, une version ou un statut est faux, périmé ou absent.
+labels: [données]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page concernée
+      description: Adresse de la page du portail ou nom de la fiche.
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Nature du problème
+      options:
+        - Lien cassé
+        - Version ou statut incorrect
+        - Information manquante
+        - Information fausse
+        - Autre
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Ce qu'il faut corriger
+      description: Si possible, indiquez la source officielle qui fait foi.
+    validations:
+      required: true

@@ -1,0 +1,31 @@
+# Référentiels, doctrine et démarches. Les contenus restent chez leur propriétaire :
+# on ne garde ici qu'un résumé d'une phrase et un lien.
+# Schéma : schemas/standards.schema.json
+
+- id: doctrine
+  name: Doctrine du numérique en santé
+  kind: doctrine
+  summary: Cadre d'urbanisation, référentiels et services socles du numérique en santé.
+  link: https://esante.gouv.fr/sites/default/files/media_entity/documents/doctrine_2023_page-a-page_vf.pdf
+  services: [ci-sis, pgssi-s, prosante-connect]
+
+- id: referentiel-identification
+  name: Référentiel d'identification des acteurs sanitaires et médico-sociaux
+  kind: referentiel
+  summary: Exigences d'identification électronique des acteurs, publiées dans le cadre de la PGSSI-S.
+  link: https://esante.gouv.fr/sites/default/files/media_entity/documents/pgssi_referentiel_d_identification_v1.0.pdf
+  services: [pgssi-s, prosante-connect]
+
+- id: homologation
+  name: Homologation de sécurité
+  kind: demarche
+  summary: Démarche qui formalise l'acceptation des risques de sécurité avant la mise en production.
+  link: https://industriels.esante.gouv.fr/
+  services: [pgssi-s]
+
+- id: gnius
+  name: G_NIUS
+  kind: guichet
+  summary: Guichet national de l'innovation et des usages en e-santé, avec des parcours guidés pour les éditeurs et porteurs de projet.
+  link: https://gnius.esante.gouv.fr/
+  services: []

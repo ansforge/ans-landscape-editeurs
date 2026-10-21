@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question sur un service (support officiel)
+    url: https://industriels.esante.gouv.fr/
+    about: Pour une question sur l'utilisation d'un service, le support se trouve chez son propriétaire.

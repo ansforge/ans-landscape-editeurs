@@ -1,0 +1,34 @@
+name: Proposer un nouveau service
+description: Un service du numérique en santé manque au catalogue.
+labels: [catalogue]
+body:
+  - type: input
+    id: nom
+    attributes:
+      label: Nom du service
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: Thème
+      options:
+        - Identité
+        - Interopérabilité
+        - Sécurité et confiance
+        - Services et données
+        - Tests
+    validations:
+      required: true
+  - type: input
+    id: documentation
+    attributes:
+      label: Lien vers la documentation officielle
+    validations:
+      required: true
+  - type: textarea
+    id: pourquoi
+    attributes:
+      label: À quoi sert-il et qui est concerné ?
+    validations:
+      required: true

@@ -1,0 +1,225 @@
+# Catalogue des briques du portail (une entrée par service).
+# Source de vérité : le site et les pages de service sont générés depuis ce fichier.
+# Schéma : schemas/services.schema.json
+#
+# `validated: false` signale une fiche à relire par le référent (bandeau affiché sur le site).
+# Principe : on renvoie vers la source officielle, on ne recopie pas son contenu.
+
+- id: prosante-connect
+  name: Pro Santé Connect
+  theme: identite
+  summary: Authentifier un professionnel de santé avec OpenID Connect.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Votre logiciel donne accès à des données ou à des actions réservées à un professionnel de santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://industriels.esante.gouv.fr/produits-et-services/pro-sante-connect
+    specification: https://esante.gouv.fr/ens/offre/pro-sante-connect/documentation-technique
+    sandbox: https://esante.gouv.fr/ens/offre/pro-sante-connect/documentation-technique
+    test_data: https://industriels.esante.gouv.fr/produits-et-services/pro-sante-connect
+    support: https://industriels.esante.gouv.fr/
+  sandbox:
+    summary: Bac à sable (BAS) avec les points d'accès de découverte, d'autorisation, de jeton, UserInfo, de déconnexion et d'introspection.
+    access: Demande de raccordement au bac à sable depuis l'Espace Authentifié des industriels, délai moyen d'environ deux semaines.
+    limits: À préciser par le référent.
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: Un test réussi sur le bac à sable est exigé avant tout accès à la production.
+    referencing: Raccordement à Pro Santé Connect via l'Espace Authentifié des industriels.
+  related: [e-cps, si-coeur]
+
+- id: e-cps
+  name: e-CPS
+  theme: identite
+  summary: Moyen d'authentification mobile des professionnels de santé, utilisable avec Pro Santé Connect.
+  audience: [editeur, integrateur]
+  use_when: Vos utilisateurs professionnels doivent s'authentifier avec leur carte CPS dématérialisée.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://industriels.esante.gouv.fr/produits-et-services/pro-sante-connect
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: Voir Pro Santé Connect.
+  related: [prosante-connect]
+
+- id: pro-sante-identite
+  name: Pro Santé Identité
+  theme: identite
+  summary: Brique d'identité des professionnels de santé. Fiche à rédiger par le référent.
+  audience: [editeur, integrateur]
+  use_when: À préciser par le référent.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://industriels.esante.gouv.fr/
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+
+- id: ci-sis
+  name: CI-SIS
+  theme: interop
+  summary: Cadre d'interopérabilité des systèmes d'information de santé. Il définit les informations à échanger et les standards à utiliser.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Votre solution échange des données de santé avec d'autres systèmes d'information.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/produits-services/ci-sis
+    specification: https://interop.esante.gouv.fr/ig/doctrine/index.html
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: Les volumes applicables dépendent du type d'échange (contenus, service, transport).
+    referencing: À préciser par le référent.
+  related: [fhir-terminologies, mssante]
+
+- id: fhir-terminologies
+  name: FHIR et terminologies
+  theme: interop
+  summary: Guides d'implémentation FHIR et terminologies de santé publiées par l'ANS.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Vous exposez ou consommez des API FHIR, ou vous codez des données avec des terminologies de santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://interop.esante.gouv.fr/ig/nos/tre-nos.html
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [ci-sis]
+
+- id: pgssi-s
+  name: PGSSI-S
+  theme: securite
+  summary: Politique générale de sécurité des systèmes d'information de santé. Elle fixe les exigences de sécurité du numérique en santé.
+  audience: [editeur, integrateur]
+  use_when: Votre solution traite des données de santé ou s'intègre à l'écosystème numérique en santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/produits-services/pgssi-s
+  prerequisites:
+    security: Référentiels applicables selon votre cas, voir la documentation officielle.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [hds]
+
+- id: hds
+  name: HDS
+  theme: securite
+  summary: Hébergement de données de santé. Exigences et certification pour héberger des données de santé.
+  audience: [editeur, integrateur]
+  use_when: Votre solution héberge des données de santé à caractère personnel.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/ens/offre/hds
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: Recours à un hébergeur certifié HDS pour les données de santé.
+    referencing: À préciser par le référent.
+  related: [pgssi-s]
+
+- id: rpps
+  name: RPPS
+  theme: donnees
+  summary: Répertoire partagé des professionnels de santé, publié dans l'Annuaire Santé.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Vous devez identifier ou rechercher des professionnels de santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/produits-services/annuaire-sante
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [finess, mssante]
+
+- id: finess
+  name: FINESS
+  theme: donnees
+  summary: Fichier national des établissements sanitaires et sociaux, publié dans l'Annuaire Santé.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Vous devez identifier ou rechercher des établissements de santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/produits-services/annuaire-sante
+    specification: https://mos.esante.gouv.fr/4.html
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [rpps]
+
+- id: ror
+  name: ROR
+  theme: donnees
+  summary: Répertoire national de l'offre et des ressources en santé et accompagnement social et médico-social.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Votre solution a besoin de données sur l'offre de santé et ses ressources.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/produits-services/repertoire-ror
+    specification: https://interop.esante.gouv.fr/ig/fhir/ror/
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+
+- id: mssante
+  name: MSSanté
+  theme: donnees
+  summary: Messagerie sécurisée de santé pour échanger des données de santé entre professionnels.
+  audience: [editeur, integrateur]
+  use_when: Votre solution envoie ou reçoit des messages contenant des données de santé.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/strategie-nationale/mssante
+    specification: https://industriels.esante.gouv.fr/produits-et-services/mssante-referentiel-operateur-et-client-de-messagerie
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [ci-sis, rpps]
+
+- id: si-coeur
+  name: SI-Cœur
+  theme: tests
+  summary: Environnement de test regroupant le bac à sable Pro Santé Connect et EDIT.
+  audience: [editeur, integrateur, developpeur]
+  use_when: Vous voulez tester votre intégration avec des identités fictives avant la production.
+  owner: Référent du portail
+  validated: false
+  updated: 2026-10-20
+  links:
+    documentation: https://esante.gouv.fr/ens/offre/pro-sante-connect/documentation-technique
+    sandbox: https://esante.gouv.fr/ens/offre/pro-sante-connect/documentation-technique
+  sandbox:
+    summary: Bac à sable Pro Santé Connect et EDIT, pour créer des identités de test, tester la connexion et vérifier les règles métier.
+    access: À préciser par le référent.
+    limits: À préciser par le référent.
+  prerequisites:
+    security: À préciser par le référent.
+    compliance: À préciser par le référent.
+    referencing: À préciser par le référent.
+  related: [prosante-connect]

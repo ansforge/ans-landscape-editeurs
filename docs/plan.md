@@ -2,6 +2,20 @@
 
 Ce plan suit le [PRD](prd.md). Les choix techniques sont dans l'[architecture](architecture.md) et l'expérience cible dans l'[UX design](ux-design.md). Les phases sont ordonnées et livrables ; les durées sont à fixer avec l'équipe.
 
+## Avancement
+
+| Phase | État |
+|---|---|
+| 0 Cadrage | Fait : décisions dans le [PRD §11](prd.md) |
+| 1 Fondations | Fait : Docusaurus, workflows de validation, déploiement et contrôle des liens. Reste à faire côté GitHub : activer Pages (source « GitHub Actions ») et protéger `main` |
+| 2 Modèle de données | Fait : schémas, cohérence, tests. Fiche Pro Santé Connect renseignée mais `validated: false` |
+| 3 UX et maquettes | Maquettes faites ([design/](design/index.html)). Le test avec 5 utilisateurs n'est pas fait |
+| 4 Socle du site | Fait. La recherche est une recherche plein texte maison. Pas de contrôle d'accessibilité (décision du porteur) |
+| 5 Contenu MVP | Pages et 12 fiches en place. Contenu à relire et à compléter par le référent (versions, prérequis, limites des sandbox, exemples) |
+| 6 Parcours et questionnaire | Fait : questionnaire, résultat partageable, 3 parcours pilotes, 8 tests |
+| 7 Recette et mise en ligne | En cours : [dossier de recette](recette.md) et revue des secrets faits. Reste à faire (personnes identifiées) : relecture des fiches, test utilisateur, mentions légales, décisions audience et accessibilité, GATE |
+| 8 Enrichissement | Commencé : export JSON public des données (`/data/*.json`) et contrôle hebdomadaire des liens. Reste : `upstream.yml`, carte Landscape2, services restants |
+
 ## Vue d'ensemble
 
 ```text

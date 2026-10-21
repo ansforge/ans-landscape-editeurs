@@ -135,20 +135,33 @@ Les pages éditoriales (`docs/`) restent courtes. Elles expliquent le chemin et 
 
 ## 6. Organisation du dépôt
 
-Structure cible, conforme au PRD §8 avec les ajouts nécessaires au build :
+Structure réalisée. Elle diffère du PRD §8 sur un point : le contenu éditorial est généré depuis `data/` et les pages React de `src/pages/`, il n'y a donc pas de dossiers `docs/start`, `docs/journeys`, etc. Le dossier `docs/` contient la documentation du projet.
 
 ```text
-ans-developer-portal/
-├── docs/                  # contenu éditorial (start, journeys, standards, support…)
-├── data/                  # source de vérité
-├── schemas/               # JSON Schema
-├── examples/              # java, javascript, python, curl
-├── src/                   # composants du site (questionnaire, tableau de versions, fiche)
-├── scripts/               # génération des pages, validation, export Landscape2
+.
+├── data/                  # source de vérité (services, versions, roadmaps, standards, journeys)
+├── schemas/               # JSON Schema de chaque fichier de data/
+├── src/
+│   ├── pages/             # accueil, questionnaire, catalogue, versions, parcours, tests…
+│   ├── components/        # fiche service, résultat, étapes, composants communs
+│   ├── lib/               # règles du questionnaire, libellés, accès aux données
+│   ├── theme/             # Layout DSFR (en-tête, pied de page) et page 404
+│   └── css/custom.css     # DSFR et styles propres (statuts de version, frise)
+├── plugins/portail-data.js  # crée les pages service, étape et parcours pilote
+├── scripts/               # validate.js, check-links.js, load-data.js
+├── tests/                 # tests des règles du questionnaire
+├── examples/              # exemples d'intégration (à venir)
+├── docs/                  # PRD, architecture, UX, plan, maquettes HTML
 ├── .github/workflows/     # validate.yml, deploy.yml, links.yml
 ├── CHANGELOG.md
 └── README.md
 ```
+
+Particularités :
+
+- Docusaurus est utilisé sans son thème visuel : `src/theme/Layout` remplace la mise en page par défaut par le DSFR, et `docs` et `blog` sont désactivés.
+- Les règles du questionnaire sont dans `src/lib/rules.mjs`, une fonction pure partagée par le site et les tests.
+- Le menu mobile est géré en React : le JavaScript du DSFR n'est pas chargé.
 
 ## 7. Pipeline CI/CD
 
@@ -157,7 +170,7 @@ ans-developer-portal/
 | `validate.yml` | PR | Schémas, cohérence des données, liens internes, build à blanc |
 | `deploy.yml` | push sur `main` | Build et publication GitHub Pages |
 | `links.yml` | planifié (hebdomadaire) | Vérifie les liens sortants, ouvre une issue en cas d'échec |
-| `upstream.yml` (plus tard) | planifié | Compare les versions publiées en amont avec `versions.yml` et ouvre une issue |
+| `upstream.yml` (plus tard, non réalisé) | planifié | Compare les versions publiées en amont avec `versions.yml` et ouvre une issue |
 
 Les aperçus de PR sont possibles (artefact de build ou déploiement de prévisualisation) pour relire une fiche avant fusion.
 

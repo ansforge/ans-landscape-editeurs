@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "journeys.yml",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["steps", "questions", "rules", "pilots"],
+  "properties": {
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "objective", "actions"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "title": { "type": "string" },
+          "objective": { "type": "string" },
+          "actions": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+          "themes": { "type": "array", "items": { "enum": ["identite", "interop", "securite", "donnees", "tests"] } },
+          "standards": { "type": "array", "items": { "type": "string" } },
+          "needs": { "enum": ["sandbox"] },
+          "flag": { "type": "string" }
+        }
+      }
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "label", "options"],
+        "properties": {
+          "id": { "type": "string" },
+          "label": { "type": "string" },
+          "options": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "label"],
+              "properties": {
+                "id": { "type": "string" },
+                "label": { "type": "string" },
+                "hint": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["when"],
+        "properties": {
+          "when": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": { "type": "array", "minItems": 1, "items": { "type": "string" } }
+          },
+          "services": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["id", "level"],
+              "properties": {
+                "id": { "type": "string" },
+                "level": { "enum": ["certain", "maybe"] }
+              }
+            }
+          },
+          "standards": { "type": "array", "items": { "type": "string" } },
+          "flags": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "pilots": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "title", "summary", "answers"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+          "title": { "type": "string" },
+          "summary": { "type": "string" },
+          "answers": { "type": "object", "additionalProperties": { "type": "string" } }
+        }
+      }
+    }
+  }
+}
